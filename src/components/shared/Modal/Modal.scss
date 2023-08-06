@@ -1,0 +1,40 @@
+.modal-dialog {
+  position: relative;
+  z-index: 30;
+
+  .overlay {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    opacity: 1;
+    --tw-bg-opacity: 0.75;
+    background: rgba(0,0,0,0.4);
+    inset: 0px;
+    position: fixed;
+  }
+
+  .modal-container {
+    position: fixed;
+    inset: 0;
+    overflow-y: auto;
+
+    .modal-screen {
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;
+
+      .modal-screen-body{
+        background-color: #ffffff;
+        opacity: 1;
+        vertical-align: middle;
+        padding: 24px;
+        border-radius: 0.375rem;
+        width: 100%;
+        max-width: 600px;
+        transition: 0.3s ease all;
+      }
+    }
+  }
+}
